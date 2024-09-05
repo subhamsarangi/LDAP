@@ -1,17 +1,18 @@
 # LDAP - Lightweight Directory Access Protocol
 
-## INSTALL LDAP AND START SERVICE
-sudo apt-get install ldap-utils slapd
-sudo dpkg-reconfigure slapd
-sudo systemctl start slapd.service
+### INSTALL LDAP AND START SERVICE
+`sudo apt-get install ldap-utils slapd`
+
+`sudo dpkg-reconfigure slapd`
+
+`sudo systemctl start slapd.service`
+
+### FIREWALL EXCEPTION FOR EXTERNAL CONNECTIONS
+`sudo ufw allow ldap`
 
 
-## FIREWALL EXCEPTION FOR EXTERNAL CONNECTIONS
-sudo ufw allow ldap
-
-
-## EDIT CONFIG FILE
-sudo nano /etc/ldap/ldap.conf
+### EDIT CONFIG FILE
+`sudo nano /etc/ldap/ldap.conf`
 
 ```
 BASE     dc=mycompany,dc=local
