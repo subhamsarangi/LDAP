@@ -1,0 +1,46 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=mycompany,dc=local> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# mycompany.local
+dn: dc=mycompany,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: My LDAP Server
+dc: mycompany
+
+# Manager, mycompany.local
+dn: cn=Manager,dc=mycompany,dc=local
+objectClass: organizationalRole
+cn: Manager
+description: LDAP Manager
+
+# User Name, mycompany.local
+dn: cn=User Name,dc=mycompany,dc=local
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: subham
+cn: Subham Sarangi
+cn: User Name
+sn: subham
+displayName: Subham Sarangi
+mail: subham@yopmail.com
+
+# ldapusers, mycompany.local
+dn: ou=ldapusers,dc=mycompany,dc=local
+objectClass: organizationalUnit
+ou: ldapUsers
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 5
+# numEntries: 4
