@@ -124,7 +124,7 @@ cn: New Name
 
 `ldapsearch -x -b "dc=mycompany,dc=local" "(objectclass=*)"`
 
-##### see [example_result] (example_result.txt)
+##### see [example_result](example_result.txt)
 
 #### does not work 
 `ldapsearch -Y EXTERNAL -H ldapi:/// -b "cn=config" "(olcRootPW=*)"`
