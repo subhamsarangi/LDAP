@@ -1,27 +1,5 @@
-# LDAP - Lightweight Directory Access Protocol
+# INTERACTING WITH THE SERVER
 
-## INSTALL LDAP AND START SERVICE
-sudo apt-get install ldap-utils slapd
-sudo dpkg-reconfigure slapd
-sudo systemctl start slapd.service
-
-
-## FIREWALL EXCEPTION FOR EXTERNAL CONNECTIONS
-sudo ufw allow ldap
-
-
-## EDIT CONFIG FILE
-sudo nano /etc/ldap/ldap.conf
-
-```
-BASE     dc=mycompany,dc=local
-URI      ldap://localhost
-```
-or 
-```
-BASE     dc=rpa,dc=ibm,dc=com
-URI      ldap://rpa.ibm.com
-```
 
 ### note: to change things in OpenLDAP, create LDIF files with information about what you want to change. Do not edit the LDIF files in the /etc/ldap/slapd.d or /etc/openldap/slapd.d manually.
 
